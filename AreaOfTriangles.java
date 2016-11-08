@@ -161,7 +161,7 @@ public class AreaOfTriangles {
 	{
 		double left = p1.x<p2.x?p1.x:p2.x;
 		double right = p1.x<p2.x?p2.x:p1.x;
-		if(left>x||right<x) return new double[]{0.0, 0.0};
+		if(left>x||right<x||(left==x && right==x)) return new double[]{0.0, 0.0};
 		else
 		{
 			double y = p1.y + (x-p1.x)*(double)(p2.y-p1.y)/(double)(p2.x-p1.x);
